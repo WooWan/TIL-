@@ -1,18 +1,12 @@
 # Variant와 Polymorphic Variant
 
-
-
 ## Variant
 
-* Nominally typed(명시적 타입)
-
-
-
-
+- Nominally typed(명시적 타입)
 
 ## Polymorphic Variant
 
-#### Strucutally typed(구조적 타이핑)
+#### Structurally typed(구조적 타이핑)
 
 Variant는 명시적 타이핑을 지원해서, 아래 코드에서 에러를 발생시킬 것이다. 하지만 구조적 타이핑 시스템에서는 displayColor의 부분 타입이기 때문에 에러가 발생하지 않는다.
 
@@ -34,11 +28,9 @@ Js.log(displayColor(myColor))
 
 ```
 
-
-
 #### Extra Constraints on Types
 
-또한, lower bound, upper bound 타입을 지원한다. 
+또한, lower bound, upper bound 타입을 지원한다.
 
 ```ts
 RES
@@ -54,8 +46,6 @@ let foreground: [> #Red] = #Green
 let background: [< #Red | #Blue] = #Red
 ```
 
-
-
 #### Coercion(타입 변환)
 
 You can convert a poly variant to a `string` or `int` at no cost:
@@ -67,9 +57,4 @@ let theCompany: company = #Apple
 let message = "Hello " ++ (theCompany :> string)
 ```
 
-
-
-
-
 ## 차이점
-
